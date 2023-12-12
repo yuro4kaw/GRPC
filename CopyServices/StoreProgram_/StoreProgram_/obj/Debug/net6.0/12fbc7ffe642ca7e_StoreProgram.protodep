@@ -1,0 +1,3 @@
+obj\Debug\net6.0\Protos/StoreProgram.cs \
+obj\Debug\net6.0\Protos/StoreProgramGrpc.cs: C:/Users/vlad/.nuget/packages/grpc.tools/2.59.0/build/native/include/google/protobuf/empty.proto\
+ Protos/StoreProgram.proto

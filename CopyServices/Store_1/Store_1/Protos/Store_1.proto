@@ -1,0 +1,38 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Store_1";
+
+package greet;
+
+import "google/protobuf/empty.proto";
+
+service Store1 {
+    rpc GetProducts(google.protobuf.Empty) returns (ProductList);
+    rpc GetSeller(google.protobuf.Empty) returns (SellerList);
+}
+
+message Product1 {
+    int32 id = 1;
+    string productName = 2;
+    double price = 3;
+    string description = 4;
+    int32 sellerId = 5;
+}
+
+message Seller1 {
+    int32 id = 1;
+    string sellerName = 2;
+    string email = 3;
+}
+
+
+message ProductList {
+    repeated Product1 products = 1;
+}
+
+message SellerList {
+    repeated Seller1 sellers = 1;
+}
+
+
+

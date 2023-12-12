@@ -1,0 +1,39 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "StoreProgram_";
+
+package greet;
+
+import "google/protobuf/empty.proto";
+
+
+service StoreProgram {
+    rpc GetBaskets(google.protobuf.Empty) returns (BasketList);
+    rpc GetClients(google.protobuf.Empty) returns (ClientList);
+}
+
+
+message Basket1 {
+    int32 basketID = 1;
+    int32 clientID = 2;
+    string productName = 3;
+    int32 quantity = 4;
+    float price = 5;
+}
+
+message Client1 {
+    int32 clientID = 1;
+    string clientName = 2;
+    string numberPhone = 3;
+}
+
+
+message BasketList {
+    repeated Basket1 baskets = 1;
+}
+
+message ClientList {
+    repeated Client1 clients = 1;
+}
+
+
